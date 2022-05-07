@@ -1,3 +1,10 @@
+# download cosmopolitan.zip
+libcosmo/*
+!libcosmo/README.md
+
+# artifact after make install
+blis.pc
+
 # -- generic files to ignore --
 
 # emacs backup files

@@ -692,7 +692,8 @@ ifeq ($(IS_WIN),yes)
 # independent.
 CPICFLAGS :=
 else
-CPICFLAGS := -fPIC
+# CPICFLAGS := -fPIC
+CPICFLAGS :=
 endif
 $(foreach c, $(CONFIG_LIST_FAM), $(eval $(call append-var-for,CPICFLAGS,$(c))))
 
@@ -874,6 +875,8 @@ endif
 #
 # --- LDFLAGS cleanup ----------------------------------------------------------
 #
+LDFLAGS:=$(filter-out -lm,$(LDFLAGS))
+LDFLAGS:=$(filter-out -lrt,$(LDFLAGS))
 
 
 
