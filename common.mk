@@ -877,6 +877,7 @@ endif
 #
 LDFLAGS:=$(filter-out -lm,$(LDFLAGS))
 LDFLAGS:=$(filter-out -lrt,$(LDFLAGS))
+LDFLAGS += -static -nostdlib -nostdinc -fno-pie -mno-red-zone -fuse-ld=bfd -Wl,-T,$(SHARE_PATH)/libcosmo/ape.lds -include $(SHARE_PATH)/libcosmo/cosmopolitan.h $(SHARE_PATH)/libcosmo/crt.o  $(SHARE_PATH)/libcosmo/ape.o  $(SHARE_PATH)/libcosmo/cosmopolitan.a
 
 
 
