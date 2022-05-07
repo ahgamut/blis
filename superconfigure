@@ -60,3 +60,5 @@ make -j4
 
 echo "<<<SUPERCONFIGURE>>> Running make install into $(COSMO_LIBDIR)"
 make install
+
+echo "<<<SUPERCONFIGURE>>> DONE. Go to examples/oapi/ and run the examples"
