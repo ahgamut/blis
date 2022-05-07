@@ -20,8 +20,8 @@ LD_LIBRARY_PATH="" \
     PKG_CONFIG="" \
     CFLAGS="-g3 -Wall -Wno-strict-prototypes -Wno-unused-value \
       -std=c99 -static \
-      -fno-pie -fno-omit-frame-pointer \
-      -mno-red-zone -pg \
+      -fno-pie \
+      -mno-red-zone \
       -nostdinc -nostdlib \
       -I$HEADER_PATHS \
       -include $COSMO_LIBDIR/cosmopolitan.h" \
@@ -37,8 +37,8 @@ LD_LIBRARY_PATH="" \
       $COSMO_LIBDIR/cosmopolitan.a" \
     CFLAGS_NODIST="-Wall -Wno-strict-prototypes -Wno-unused-value \
       -std=c99 -static \
-      -fno-pie -fno-omit-frame-pointer \
-      -mno-red-zone -pg \
+      -fno-pie \
+      -mno-red-zone \
       -nostdinc -nostdlib \
       -I$HEADER_PATHS \
       -include $COSMO_LIBDIR/cosmopolitan.h"\
@@ -53,7 +53,7 @@ LD_LIBRARY_PATH="" \
         --enable-threading=no \
         --disable-system \
         --disable-rpath \
-        generic
+        penryn
 
 echo "<<<SUPERCONFIGURE>>> Running make"
 make -j4
